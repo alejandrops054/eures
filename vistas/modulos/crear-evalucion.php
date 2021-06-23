@@ -30,16 +30,16 @@
                             </div>
                         </div>';
 
-                        $itemLineamiento = "idcategoria";
-                        $valorLineamiento = $value["id"];
+                        $itemLineamiento = null;
+                        $valorLineamiento = null;
 
                         $lineamiento = ControladorLineamiento::ctrMostrarLineamientos($itemLineamiento, $valorLineamiento);
 
                         foreach ($lineamiento as $valores){
                             
-                            if($lineamiento["idcategoria"] == $value["id"]){
+                            if($valores["idcategoria"] == $value["id"]){
                                 echo'<div class="box-body">
-                                       '.$lineamiento["lino"].' '.$lineamiento["lineamiento"].'
+                                       '.$valores["lino"].' '.$valores["lineamiento"].'
                                     </div>';
                             }
     
