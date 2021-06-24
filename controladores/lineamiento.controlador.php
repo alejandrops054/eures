@@ -81,5 +81,18 @@ class ControladorLineamiento{
 		return $respuesta;
 	
 	}
+	/*=============================================
+	SUMA TOTAL VENTAS
+	=============================================*/
+
+	static public function ctrSumaTotalLineamento(){
+
+		$tabla = "sub_categoria_fs";
+
+		$respuesta = ModeloLineamiento::mdlSumaTotal($tabla);
+
+		return $respuesta;
+
+	}
 
 }

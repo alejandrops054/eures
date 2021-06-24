@@ -62,4 +62,21 @@ class ModeloLineamiento{
 		$stmt = null;
 
 	}
+
+	/*=============================================
+	MOSTRAR SUMA    
+	=============================================*/
+	static public function mdlSumaTotal($tabla){	
+
+		$stmt = Conexion::conectar()->prepare("SELECT SUM(puntos) as puntos FROM $tabla");
+
+		$stmt -> execute();
+
+		return $stmt -> fetch();
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
 }
